@@ -1,0 +1,64 @@
+<app-header></app-header>
+
+
+<h3>The employee details can be found below: </h3>
+
+<!-- {{employees | json}} -->
+
+<div class="container">
+    <div style="text-align: center;">
+        <button type="button" (click)="toggleTable()">{{tableStatus}}</button>
+    </div>
+
+    <table border="3" class="empTable" *ngIf="tableShow">
+        <thead>
+            <tr>
+                <th>SL.NO</th>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>EMAIL</th>
+                <th>USERNAME</th>
+                <th>PHONE</th>
+                <th>WEBSITE</th>
+                <th>ZIPCODE</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr *ngFor="let emp of employees; let i = index">
+                <td>{{i+1}}</td>
+                <td>{{emp.id}}</td>
+                <td>{{emp.name}}</td>
+                <td>{{emp.email}}</td>
+                <td>{{emp.username}}</td>
+                <td>{{emp.phone}}</td>
+                <td>{{emp.website}}</td>
+                <td>{{emp.address.zipcode}}</td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div>
+    <select (change) = "selectRole($event)">
+        <option value="">-select-</option>
+        <option value="backend">BACKEND</option>
+        <option value="ui">UI</option>
+        <option value="ux">UX</option>
+        <option value="database">DATABASE</option>
+
+    </select>
+
+    <div [ngSwitch]='role'>
+      <h2 *ngSwitchCase = "'backend'"> This is BACKEND</h2>
+      <h2 *ngSwitchCase = "'ui'"> This is UI</h2>
+      <h2 *ngSwitchCase = "'ux'"> This is UX</h2>
+      <h2 *ngSwitchCase = "'database'"> This is DATABASE</h2>
+    
+    </div>
+
+</div>
+
+
+<app-footer></app-footer>
