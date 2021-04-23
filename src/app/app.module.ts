@@ -9,6 +9,7 @@ import { ContainerComponent } from './component/container/container.component';
 import { FormsModule } from '@angular/forms';
 import { NameSortPipe } from './pipes/name-sort.pipe';
 import { DateToAgePipe } from './pipes/date-to-age.pipe';
+import { AppHighlightDirective } from './directive/app-highlight.directive';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { DateToAgePipe } from './pipes/date-to-age.pipe';
     FooterComponent,
     ContainerComponent,
     NameSortPipe,
-    DateToAgePipe
+    DateToAgePipe,
+    AppHighlightDirective
   ],
   imports: [
     BrowserModule,

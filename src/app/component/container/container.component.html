@@ -21,6 +21,7 @@
                 <th>USERNAME</th>
                 <th>PHONE</th>
                 <th>WEBSITE</th>
+                <th>AGE</th>
                 <th>ZIPCODE</th>
             </tr>
         </thead>
@@ -34,6 +35,7 @@
                 <td>{{emp.username}}</td>
                 <td>{{emp.phone}}</td>
                 <td>{{emp.website}}</td>
+                <td>{{emp.DOB | dateToAge}}</td>
                 <td>{{emp.address.zipcode}}</td>
 
             </tr>
@@ -61,10 +63,18 @@
 
 </div>
 
-{{ 2014-09-08 | dateToAge}}
+<!-- {{ 2000-09-08 | dateToAge}} -->
 
 
+<h2 appAppHighlight style="text-align: center;"> HOVER to change</h2>
 
 
+PRINCIPLE: <input type="text" name="principle" [(ngModel)]="principle"> 
+<br>
+TIME(in years): <input type="number" name="time" [(ngModel)]="time">
+<br>
+RATE OF INTEREST: <input type="text" name="roi" [(ngModel)]="roi">
+<br>
+<button type="button" (click)="calculateSI()">CALCULATE</button><h4 style="display: inline;">{{SI}}</h4>
 
 <!-- <app-footer></app-footer> -->

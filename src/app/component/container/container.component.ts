@@ -16,6 +16,7 @@ export class ContainerComponent implements OnInit {
       "name": "Leanne Graham",
       "username": "Bret",
       "email": "Sincere@april.biz",
+      "DOB": new Date("1989-05-09"),
       "address": {
         "street": "Kulas Light",
         "suite": "Apt. 556",
@@ -39,6 +40,8 @@ export class ContainerComponent implements OnInit {
       "name": "Ervin Howell",
       "username": "Antonette",
       "email": "Shanna@melissa.tv",
+      "DOB": new Date("1999-09-01"),
+
       "address": {
         "street": "Victor Plains",
         "suite": "Suite 879",
@@ -62,6 +65,8 @@ export class ContainerComponent implements OnInit {
       "name": "Clementine Bauch",
       "username": "Samantha",
       "email": "Nathan@yesenia.net",
+      "DOB": new Date("2000-05-09"),
+
       "address": {
         "street": "Douglas Extension",
         "suite": "Suite 847",
@@ -85,6 +90,8 @@ export class ContainerComponent implements OnInit {
       "name": "Patricia Lebsack",
       "username": "Karianne",
       "email": "Julianne.OConner@kory.org",
+      "DOB": new Date("2003-05-09"),
+
       "address": {
         "street": "Hoeger Mall",
         "suite": "Apt. 692",
@@ -108,6 +115,8 @@ export class ContainerComponent implements OnInit {
       "name": "Chelsey Dietrich",
       "username": "Kamren",
       "email": "Lucio_Hettinger@annie.ca",
+      "DOB": new Date("1970-05-09"),
+
       "address": {
         "street": "Skiles Walks",
         "suite": "Suite 351",
@@ -131,6 +140,8 @@ export class ContainerComponent implements OnInit {
       "name": "Mrs. Dennis Schulist",
       "username": "Leopoldo_Corkery",
       "email": "Karley_Dach@jasper.info",
+      "DOB": new Date("1963-05-09"),
+
       "address": {
         "street": "Norberto Crossing",
         "suite": "Apt. 950",
@@ -154,6 +165,8 @@ export class ContainerComponent implements OnInit {
       "name": "Kurtis Weissnat",
       "username": "Elwyn.Skiles",
       "email": "Telly.Hoeger@billy.biz",
+      "DOB": new Date("1993-05-09"),
+
       "address": {
         "street": "Rex Trail",
         "suite": "Suite 280",
@@ -177,6 +190,8 @@ export class ContainerComponent implements OnInit {
       "name": "Nicholas Runolfsdottir V",
       "username": "Maxime_Nienow",
       "email": "Sherwood@rosamond.me",
+      "DOB": new Date("1973-05-09"),
+
       "address": {
         "street": "Ellsworth Summit",
         "suite": "Suite 729",
@@ -200,6 +215,8 @@ export class ContainerComponent implements OnInit {
       "name": "Glenna Reichert",
       "username": "Delphine",
       "email": "Chaim_McDermott@dana.io",
+      "DOB": new Date("1963-05-09"),
+
       "address": {
         "street": "Dayna Park",
         "suite": "Suite 449",
@@ -223,6 +240,8 @@ export class ContainerComponent implements OnInit {
       "name": "Clementina DuBuque",
       "username": "Moriah.Stanton",
       "email": "Rey.Padberg@karina.biz",
+      "DOB": new Date("1963-05-09"),
+
       "address": {
         "street": "Kattie Turnpike",
         "suite": "Suite 198",
@@ -295,6 +314,19 @@ export class ContainerComponent implements OnInit {
   public selectRole(event):void{
     this.role=event.target.value;
   }
+
+  public SI:any;
+
+  public principle:number;
+  public time:number;
+  public roi:number;
+
+  public calculateSI():any{
+
+    this.SI ="Your SI : "+ (this.principle * this.time*this.roi)/100;
+    return  this.SI;
+  }
+
 
   ngOnInit(): void {
   }

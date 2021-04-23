@@ -8,6 +8,7 @@ export class NameSortPipe implements PipeTransform {
   transform(value: Array<any>, ...args: unknown[]): any {
 
      return value.sort((a, b) => a.name.localeCompare(b.name));
+     
     // return value.sort((a, b) => {
     //   console.log(value);
     //   let x = a.name.toLowerCase();
