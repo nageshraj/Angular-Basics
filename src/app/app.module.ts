@@ -7,13 +7,18 @@ import { HeaderComponent } from './component/header/header.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { ContainerComponent } from './component/container/container.component';
 import { FormsModule } from '@angular/forms';
+import { NameSortPipe } from './pipes/name-sort.pipe';
+import { DateToAgePipe } from './pipes/date-to-age.pipe';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    ContainerComponent
+    ContainerComponent,
+    NameSortPipe,
+    DateToAgePipe
   ],
   imports: [
     BrowserModule,

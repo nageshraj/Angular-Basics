@@ -8,6 +8,7 @@
 <div class="container">
     <div style="text-align: center;">
         <button type="button" (click)="toggleTable()">{{tableStatus}}</button>
+        <!-- <button type="button" (click)="toggleTable()">{{tableStatus}}</button> -->
     </div>
 
     <table border="3" class="empTable" *ngIf="tableShow">
@@ -25,10 +26,10 @@
         </thead>
         <tbody>
 
-            <tr *ngFor="let emp of employees; let i = index">
+            <tr *ngFor="let emp of (employees | nameSort); let i = index">
                 <td>{{i+1}}</td>
                 <td>{{emp.id}}</td>
-                <td>{{emp.name}}</td>
+                <td>{{emp.name | uppercase}}</td>
                 <td>{{emp.email}}</td>
                 <td>{{emp.username}}</td>
                 <td>{{emp.phone}}</td>
@@ -60,5 +61,10 @@
 
 </div>
 
+{{ 2014-09-08 | dateToAge}}
 
-<app-footer></app-footer>
+
+
+
+
+<!-- <app-footer></app-footer> -->

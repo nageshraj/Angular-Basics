@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NameSortPipe } from 'src/app/pipes/name-sort.pipe';
 
 @Component({
   selector: 'app-container',
@@ -241,6 +242,37 @@ export class ContainerComponent implements OnInit {
       }
     }
   ]
+
+ // sortedEmployees = this.employees.sort((a, b) => (a.username > b.username) ? 1 : -1)
+
+  //  sortedEmployees = {{this.employees | nameSort}}
+
+  // public tableSort = false;
+
+  // public sortStatus: string = "SORT TABLE"
+
+
+  // toggleSort():any{
+  //   this.tableSort = !this.tableSort;
+  //   if(this.sortStatus == "SORT TABLE"){
+  //     this.sortStatus = "UNSORT TABLE";
+  //     return this.sortedEmployees;
+  //   }
+  //   else{
+  //     this.sortStatus = "SORT TABLE";
+  //     return this.employees
+  //   }
+
+  // }
+
+  
+
+
+  // public sortByName(): lis{
+
+  // }
+
+  // sortedEmployees =this.employees.sort(this.sortByName);
 
   public tableStatus: string = "HIDE TABLE"
 
