@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NameSortPipe } from 'src/app/pipes/name-sort.pipe';
+import {SimpleInterestService} from '../../service/simple-interest.service';
 
 @Component({
   selector: 'app-container',
@@ -8,7 +9,7 @@ import { NameSortPipe } from 'src/app/pipes/name-sort.pipe';
 })
 export class ContainerComponent implements OnInit {
 
-  constructor() { }
+  constructor(private simpleInterestService: SimpleInterestService) { }
 
   employees = [
     {
@@ -321,10 +322,14 @@ export class ContainerComponent implements OnInit {
   public time:number;
   public roi:number;
 
-  public calculateSI():any{
+ public SIForAny:any;
 
-    this.SI ="Your SI : "+ (this.principle * this.time*this.roi)/100;
+  public SIcalculation(){
+  
+    this.SIForAny=this.simpleInterestService.calculateSI(this.principle,this.time,this.roi);
+    this.SI = "Your SI : "+this.SIForAny;
     return  this.SI;
+    
   }
 
 
