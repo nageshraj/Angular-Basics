@@ -1,0 +1,39 @@
+<br><br>
+
+<!-- @CrossOrigin(origins = "http://localhost:4200") -->
+
+<h3>SELECT A COUNTRY TO FETCH DETAILS</h3>
+<select name="countrySelected" [(ngModel)]="countryName"  (change) = "getCountryDetailsByName()">
+    <option *ngFor="let country of myCountries ">{{country.name}}</option>
+</select>
+<!-- <h2>{{countryName | json}} </h2> -->
+
+<!-- <h4 *ngFor="let country of countrySelected ">
+    {{country.name}}--{{country.capital}}--{{country.population}}--{{country.flag}}
+</h4> -->
+
+<br><br>
+<table border="3" class="countryTable" >
+    <thead>
+        <tr>
+            <th>NAME</th>
+            <th>CAPITAL</th>
+            <th>POPULATION</th>
+            <th>FLAG LINK</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr *ngFor="let country of countrySelected ">
+            <td>{{country.name}}</td>
+            <td>{{country.capital}}</td>
+            <td>{{country.population}}</td>
+            <td>{{country.flag}}</td>
+            
+
+        </tr>
+    </tbody>
+</table>
+
+<!-- {{myCountries | json}} -->
