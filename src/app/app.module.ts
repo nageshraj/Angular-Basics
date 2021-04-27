@@ -19,6 +19,7 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { PageNotFoundComponent } from './component/page-not-found/page-not-found.component';
 import { HomeComponent } from './component/home/home.component';
 import { RouteDemoComponent } from './component/route-demo/route-demo.component';
+import { AadharComponent } from './component/aadhar/aadhar.component';
 
 
 
@@ -38,6 +39,7 @@ import { RouteDemoComponent } from './component/route-demo/route-demo.component'
     PageNotFoundComponent,
     HomeComponent,
     RouteDemoComponent,
+    AadharComponent,
     
     
   ],

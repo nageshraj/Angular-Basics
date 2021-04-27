@@ -1,0 +1,30 @@
+<p>aadhar works!</p>
+
+<table border="3" class="aadharTable" >
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>PINCODE</th>
+            <th>NUMBER</th>
+            <th>AREA</th>
+            <!-- <th>PAN NAME</th>
+            <th>PAN NUMBER</th>
+            <th>PAN CITY</th>    -->
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr *ngFor="let aadhar of aadharDetails ">
+            <td>{{aadhar.id}}</td>
+            <td>{{aadhar.name}}</td>
+            <td>{{aadhar.pincode}}</td>
+            <td>{{aadhar.number}}</td>
+            <td>{{aadhar.area}}</td>
+            <!-- <td>{{aadhar.panEntity.panName}}</td>
+            <td>{{aadhar.panEntity.panNumber}}</td>
+            <td>{{aadhar.panEntity.panCity}}</td> -->
+
+        </tr>
+    </tbody>
+</table>
