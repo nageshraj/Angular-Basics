@@ -20,6 +20,8 @@ import { PageNotFoundComponent } from './component/page-not-found/page-not-found
 import { HomeComponent } from './component/home/home.component';
 import { RouteDemoComponent } from './component/route-demo/route-demo.component';
 import { AadharComponent } from './component/aadhar/aadhar.component';
+import { RegistrationFormComponent } from './component/registration-form/registration-form.component';
+import { LoginComponent } from './component/login/login.component';
 
 
 
@@ -40,6 +42,8 @@ import { AadharComponent } from './component/aadhar/aadhar.component';
     HomeComponent,
     RouteDemoComponent,
     AadharComponent,
+    RegistrationFormComponent,
+    LoginComponent,
     
     
   ],
