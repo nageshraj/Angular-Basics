@@ -22,6 +22,8 @@ import { RouteDemoComponent } from './component/route-demo/route-demo.component'
 import { AadharComponent } from './component/aadhar/aadhar.component';
 import { RegistrationFormComponent } from './component/registration-form/registration-form.component';
 import { LoginComponent } from './component/login/login.component';
+import { SelectComponentComponent } from './component/select-component/select-component.component';
+import { SimpleInterestComponent } from './component/simple-interest/simple-interest.component';
 
 
 
@@ -44,6 +46,8 @@ import { LoginComponent } from './component/login/login.component';
     AadharComponent,
     RegistrationFormComponent,
     LoginComponent,
+    SelectComponentComponent,
+    SimpleInterestComponent,
     
     
   ],

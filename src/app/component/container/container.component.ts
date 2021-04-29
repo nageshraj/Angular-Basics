@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { NameSortPipe } from 'src/app/pipes/name-sort.pipe';
-import {SimpleInterestService} from '../../service/simple-interest.service';
 import {CountriesService} from 'src/app/service/countries.service'
 @Component({
   selector: 'app-container',
@@ -9,7 +8,7 @@ import {CountriesService} from 'src/app/service/countries.service'
 })
 export class ContainerComponent implements OnInit {
 
-  constructor(private simpleInterestService: SimpleInterestService) { }
+  constructor() { }
 
   employees = [
     {
@@ -310,27 +309,9 @@ export class ContainerComponent implements OnInit {
 
   }
 
-  public role:string;
-
-  public selectRole(event):void{
-    this.role=event.target.value;
-  }
-
-  public SI:any;
-
-  public principle:number;
-  public time:number;
-  public roi:number;
-
- public SIForAny:any;
-
-  public SIcalculation(){
   
-    this.SIForAny=this.simpleInterestService.calculateSI(this.principle,this.time,this.roi);
-    this.SI = "Your SI : "+this.SIForAny;
-    return  this.SI;
-    
-  }
+
+ 
 
 
   ngOnInit(): void {

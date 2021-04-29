@@ -1,5 +1,17 @@
 <app-header></app-header>
 
+<nav>
+    <ul>
+      <li><a routerLink="/register" routerLinkActive="active">REGISTER</a></li>
+      <li><a routerLink="/role" routerLinkActive="active">ROLE</a></li>
+      <li><a routerLink="/simpleInterest" routerLinkActive="active">SIMPLE INTEREST</a></li>
+      <li><a routerLink="/countries" routerLinkActive="active">COUNTRIES</a></li>
+
+
+    </ul>
+  </nav> 
+  
+<router-outlet></router-outlet>
 
 <h3>The employee details can be found below: </h3>
 
@@ -43,68 +55,24 @@
     </table>
 </div>
 
-<div>
-    <select (change) = "selectRole($event)">
-        <option value="">-select-</option>
-        <option value="backend">BACKEND</option>
-        <option value="ui">UI</option>
-        <option value="ux">UX</option>
-        <option value="database">DATABASE</option>
-
-    </select>
-
-    <div [ngSwitch]='role'>
-      <h2 *ngSwitchCase = "'backend'"> This is BACKEND</h2>
-      <h2 *ngSwitchCase = "'ui'"> This is UI</h2>
-      <h2 *ngSwitchCase = "'ux'"> This is UX</h2>
-      <h2 *ngSwitchCase = "'database'"> This is DATABASE</h2>
-    
-    </div>
-
-</div>
-
-<!-- {{ 2000-09-08 | dateToAge}} -->
-
-
-<h2 appAppHighlight style="text-align: center;"> HOVER to change</h2>
-
-
-PRINCIPLE: <input type="text" name="principle" [(ngModel)]="principle"> 
-<br>
-TIME(in years): <input type="number" name="time" [(ngModel)]="time">
-<br>
-RATE OF INTEREST: <input type="text" name="roi" [(ngModel)]="roi">
-<br>
-<button type="button" (click)="SIcalculation()">CALCULATE</button><h4 [ngStyle]="{'background-color':((SIForAny<10000)?'red':'green')}" style="display: inline;color: white;">{{SI}}</h4>
-
-<app-countries></app-countries>
-
-<app-parent></app-parent>
-<app-child></app-child>
-
-
-
-
-<app-aadhar></app-aadhar>
-
-<app-registration-form></app-registration-form>
 
 
 
 
 
+<!-- <app-select-component></app-select-component>
+<app-simple-interest></app-simple-interest> -->
 
 
+<!-- <app-countries></app-countries> -->
+
+<!-- <app-parent></app-parent>
+<app-child></app-child> -->
 
 
+<!-- <app-aadhar></app-aadhar> -->
 
-
-
-
-
-
-
-
+<!-- <app-registration-form></app-registration-form> -->
 
 
 <!-- <app-footer></app-footer> -->

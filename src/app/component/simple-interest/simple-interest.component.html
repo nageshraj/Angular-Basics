@@ -1,0 +1,10 @@
+<h2 appAppHighlight style="text-align: center;"> CALCULATE SIMPLE INTEREST</h2>
+
+
+PRINCIPLE: <input type="text" name="principle" [(ngModel)]="principle"> 
+<br>
+TIME(in years): <input type="number" name="time" [(ngModel)]="time">
+<br>
+RATE OF INTEREST: <input type="text" name="roi" [(ngModel)]="roi">
+<br>
+<button type="button" (click)="SIcalculation()">CALCULATE</button><h4 [ngStyle]="{'background-color':((SIForAny<10000)?'red':'green')}" style="display: inline;color: white;">{{SI}}</h4>

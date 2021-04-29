@@ -1,0 +1,22 @@
+<h2 appAppHighlight style="text-align: center;"> SELECT ROLE</h2>
+
+
+<div>
+    <select (change) = "selectRole($event)">
+        <option value="">-select-</option>
+        <option value="backend">BACKEND</option>
+        <option value="ui">UI</option>
+        <option value="ux">UX</option>
+        <option value="database">DATABASE</option>
+
+    </select>
+
+    <div [ngSwitch]='role'>
+      <h2 *ngSwitchCase = "'backend'"> This is BACKEND</h2>
+      <h2 *ngSwitchCase = "'ui'"> This is UI</h2>
+      <h2 *ngSwitchCase = "'ux'"> This is UX</h2>
+      <h2 *ngSwitchCase = "'database'"> This is DATABASE</h2>
+    
+    </div>
+
+</div>
